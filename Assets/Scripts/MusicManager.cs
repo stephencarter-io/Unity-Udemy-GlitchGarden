@@ -29,6 +29,10 @@ public class MusicManager : MonoBehaviour {
 	void Start () {
 		audioSource = GetComponent<AudioSource>();
 	}
+
+	public void ChangeVolume(float volume) {
+		audioSource.volume = volume;
+	}
 	
 	private void OnEnable() {
 		SceneManager.sceneLoaded += OnSceneLoaded;
